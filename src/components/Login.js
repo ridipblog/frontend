@@ -17,6 +17,7 @@ const Login = () => {
                 email,password
             })
         });
+        console.log(res.json());
         const data=await res.json();
         if(res.status===422 || !data){
             console.log("Invalid Login")
