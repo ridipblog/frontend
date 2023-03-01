@@ -6,11 +6,9 @@ const Login = () => {
     const [password,setPassword]=useState('');
     const loginUser= async(e)=>{
         e.preventDefault();
-        console.log("Hit Login");
         const res=await fetch('/singin',{
             method:"POST",
             headers:{
-                Accept: "application/json",
                 "Content-Type":"application/json"
             },
             body:JSON.stringify({
