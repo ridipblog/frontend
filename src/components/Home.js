@@ -6,7 +6,7 @@ const Home = () => {
     useEffect(() => {
         const callHomePage = async () => {
             try {
-                const res = await fetch('/home', {
+                const res = await fetch('/', {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
