@@ -10,9 +10,10 @@ const Home = () => {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
-                    },
-                    credentials: "include"
+                    }
                 });
+                console.log(res);
+                console.log(res.json());
                 const data = await res.json();
                 setUserData(data.name);
                
