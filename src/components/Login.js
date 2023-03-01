@@ -15,7 +15,7 @@ const Login = () => {
                 email,password
             })
         });
-        if(res.status===422 || !data){
+        if(res.status===422){
             console.log("Invalid Login")
         }
         else{
