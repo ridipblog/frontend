@@ -18,7 +18,7 @@ const Login = () => {
         if(res.status===422){
             console.log("Invalid Login")
         }
-        else{
+        if(res.status===201){
             console.log("Login Successful");
             navigate('/');
         }
