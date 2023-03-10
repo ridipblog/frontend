@@ -20,7 +20,7 @@ const Login = () => {
         }
         else{
             console.log("Login Successful");
-            navigate('/');
+//             navigate('/');
         }
     }
     return (
