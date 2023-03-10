@@ -9,11 +9,11 @@ const Home = () => {
                 const res = await fetch('/home', {
                     method: "GET",
                     headers: {
+                        Accept:"application/json",
                         "Content-Type": "application/json"
-                    }
+                    },
+                    credentials: "include"
                 });
-                console.log(res);
-                console.log(res.json());
                 const data = await res.json();
                 setUserData(data.name);
                
