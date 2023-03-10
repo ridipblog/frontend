@@ -5,22 +5,16 @@ const Home = () => {
     const [userData, setUserData] = useState('');
     useEffect(() => {
         const callHomePage = async () => {
-            try {
-                const res = await fetch('/home', {
-                    method: "GET",
-                    headers: {
-                        Accept:"application/json",
-                        "Content-Type": "application/json"
-                    },
-                    credentials: "include"
-                });
-                const data = await res.json();
-                setUserData(data.name);
-               
-            } catch (err) {
-                console.log(err);
-                navigate('/login')
-            }
+            const res = await fetch('/home', {
+                method: "GET",
+                headers: {
+                    Accept:"application/json",
+                    "Content-Type": "application/json"
+                },
+                credentials: "include"
+            });
+            const data = await res.json();
+            setUserData(data.name);
         }
         callHomePage();
     }, [navigate]);
