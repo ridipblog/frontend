@@ -23,6 +23,7 @@ const Login = () => {
             console.log("Invalid Login")
         }
         else{
+            console.log("Add Cookie");
             setCookie('Name', "coder", { path: '/' });
             console.log("Login Successful");
             navigate('/');
