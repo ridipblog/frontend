@@ -6,7 +6,7 @@ const About = () => {
     useEffect(() => {
         const callAboutPage = async () => {
             try {
-                const res = await fetch('/about', {
+                const res = await fetch('https://mernback-jma2.onrender.com/about', {
                     method: "GET",
                     headers: {
                         Accept: "application/json",
@@ -15,6 +15,7 @@ const About = () => {
                     credentials: "include"
                 });
                 const data = await res.json();
+                console.log(data);
                 setUserData(data);
                 if (!res.status === 200) {
                     const error = new Error(res.error);
