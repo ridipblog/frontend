@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {Link,useNavigate} from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 const Login = () => {
     const navigate=useNavigate();
     const [email,setEmail]=useState('');
@@ -21,6 +22,7 @@ const Login = () => {
             console.log("Invalid Login")
         }
         else{
+            setCookie('Name', "coder", { path: '/' });
             console.log("Login Successful");
             navigate('/');
         }
