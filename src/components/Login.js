@@ -24,8 +24,11 @@ const Login = () => {
         else{
             setCookie('Name', "coder", { path: '/' });
             localStorage.setItem('password','1234');
+            sessionStorage.setItem('cinema','faltu');
             var storage=localStorage.getItem('password');
+            var session_data=sessionStorage.getItem('cinema');
             console.log(storage);
+            console.log(session_data);
             console.log("Login Successful");
             navigate('/');
         }
