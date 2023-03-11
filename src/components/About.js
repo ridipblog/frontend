@@ -6,7 +6,7 @@ const About = () => {
     useEffect(() => {
         const callAboutPage = async () => {
             try {
-                const res = await fetch('https://mernback-jma2.onrender.com/about', {
+                const res = await fetch('/about', {
                     method: "GET",
                     headers: {
                         Accept: "application/json",
