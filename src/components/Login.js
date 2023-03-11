@@ -23,7 +23,7 @@ const Login = () => {
         }
         else{
             setCookie('Name', "coder", { path: '/' });
-            localStorage.setItem('password','1234'});
+            localStorage.setItem('password','1234');
             var storage=localStorage.getItem('password');
             console.log(storage);
             console.log("Login Successful");
