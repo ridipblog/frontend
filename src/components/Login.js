@@ -18,13 +18,14 @@ const Login = () => {
             })
         });
         const data=await res.json();
-        console.log(data.mess)
         if(res.status===422){
             console.log("Invalid Login")
         }
         else{
-            console.log("Add Cookie");
             setCookie('Name', "coder", { path: '/' });
+            localStorage.setItem('myData',{'password':'1234'});
+            var data=localStorage.getItem('myData');
+            console.log(data);
             console.log("Login Successful");
             navigate('/');
         }
