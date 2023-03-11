@@ -5,6 +5,7 @@ const Login = () => {
     const navigate=useNavigate();
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
+    const [cookies, setCookie] = useCookies(['user']);
     const loginUser= async(e)=>{
         e.preventDefault();
         const res=await fetch('https://mernback-jma2.onrender.com/singin',{
