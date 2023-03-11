@@ -14,7 +14,7 @@ const Home = () => {
 //                     },
 //                     credentials: "include"
 //                 });
-               const res=await fetch('https://mernback-jma2.onrender.com/home');
+               const res=await fetch('/home');
                 const data=await res.json();
                 setUserData(data);
             } catch (err) {
