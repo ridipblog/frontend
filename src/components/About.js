@@ -19,6 +19,7 @@ const About = () => {
                 const data = await res.json();
                 console.log(cookies.Name);
                 console.log(localStorage.getItem('password'));
+                console.log(sessionStorage.getItem('cinema'));
                 setUserData(data);
                 if (!res.status === 200) {
                     const error = new Error(res.error);
