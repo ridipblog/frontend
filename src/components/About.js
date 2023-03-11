@@ -18,6 +18,7 @@ const About = () => {
                 const res=await fetch('https://mernback-jma2.onrender.com/about');
                 const data = await res.json();
                 console.log(cookies.Name);
+                console.log(localStorage.getItem('password'));
                 setUserData(data);
                 if (!res.status === 200) {
                     const error = new Error(res.error);
