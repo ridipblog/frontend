@@ -8,7 +8,7 @@ const Login = () => {
     const [cookies, setCookie] = useCookies(['user']);
     const loginUser= async(e)=>{
         e.preventDefault();
-        const res=await fetch('/singin',{
+        const res=await fetch('https://mernback-jma2.onrender.com/singin',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
