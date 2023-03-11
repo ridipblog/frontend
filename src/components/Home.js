@@ -16,7 +16,6 @@ const Home = () => {
 //                 });
                const res=await fetch('https://mernback-jma2.onrender.com/home');
                 const data=await res.json();
-                console.log(data.name)
                 setUserData(data);
             } catch (err) {
                 console.log(err);
