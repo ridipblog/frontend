@@ -15,6 +15,8 @@ const Login = () => {
                 email,password
             })
         });
+        console.log(res);
+        console.log(res.mess);
         if(res.status===422){
             console.log("Invalid Login")
         }
