@@ -6,15 +6,14 @@ const About = () => {
     useEffect(() => {
         const callAboutPage = async () => {
             try {
-//                 const res = await fetch('https://mernback-jma2.onrender.com/about', {
-//                     method: "GET",
-//                     headers: {
-//                         Accept: "application/json",
-//                         "Content-Type": "application/json"
-//                     },
-//                     credentials: "include"
-//                 });
-                const res=await fetch('https://mernback-jma2.onrender.com/about');
+                const res = await fetch('https://mernback-jma2.onrender.com/about', {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "include"
+                });
                 const data = await res.json();
                 console.log(data);
                 setUserData(data);
