@@ -6,14 +6,15 @@ const Home = () => {
     useEffect(() => {
         const callHomePage = async () => {
            try {
-                const res = await fetch('/home', {
-                    method: "GET",
-                    headers: {
-                        Accept:"application/json",
-                        "Content-Type": "application/json"
-                    },
-                    credentials: "include"
-                });
+//                 const res = await fetch('/home', {
+//                     method: "GET",
+//                     headers: {
+//                         Accept:"application/json",
+//                         "Content-Type": "application/json"
+//                     },
+//                     credentials: "include"
+//                 });
+               const res=await fetch('https://mernback-jma2.onrender.com/home');
                 const data=await res.json();
                 console.log(data.name)
                 setUserData(data.name);
